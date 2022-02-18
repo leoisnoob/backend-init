@@ -1,0 +1,100 @@
+syntax = "proto3";
+package api;
+// HTIL 服务
+option go_package= "api";
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+import "mod.proto";
+
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+    info: {
+        title: "tats-backend";
+        description: "tats-backend http 服务文档";
+        version: "1.0";
+    }
+    host: "10.4.196.133:30090";
+    schemes: HTTP;
+};
+
+
+service HITLBack{
+	// ping
+    // 
+	// 简单测试
+    rpc Ping(PingReq) returns(PingResp){
+        option (google.api.http)={
+            get: "/api/v1/ping",
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+			summary: "ping test";
+            tags: "ping"
+        };
+    }
+    
+
+    // --------------------------------------- 用户和角色 ---------------------------------------------
+    // --------------------------------------- 用户和角色 ---------------------------------------------
+
+    rpc CreateUser(CreateUserReq) returns (CreateUserResp){
+        option (google.api.http)={
+            post: "/api/v1/user",
+            body: "*",
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+			summary: "创建用户";
+			description: "需要指定用户role id";
+			tags: "user";
+        };
+    }
+    rpc UpdateUser(UpdateUserReq) returns (UpdateUserResp){
+        option (google.api.http)={
+            put: "/api/v1/user/{username}",
+            body: "user",
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+			summary: "更新用户信息，密码等";
+			tags: "user";
+        };
+    }
+    rpc DeleteUser(DeleteUserReq) returns (SuccessResp){
+        option (google.api.http)={
+            delete: "/api/v1/user/{username}",
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+			summary: "删除用户";
+			tags: "user";
+        };
+    }
+    
+    rpc Login(LoginReq) returns (LoginResp){
+        option (google.api.http)={
+            post: "/api/v1/login",
+            body: "*",
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+			summary: "用户登录";
+			tags: "user";
+        };
+    }
+    rpc Logout(LogoutReq) returns (SuccessResp){
+        option (google.api.http)={
+            get: "/api/v1/logout",
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+			summary: "用户登出";
+			tags: "user";
+        };
+    }
+
+    rpc ListUsers(ListUsersReq) returns (ListUsersResp){
+        option (google.api.http)={
+            get: "/api/v1/user",
+        };
+        option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
+			summary: "列出所有用户";
+
+			tags: "user";
+        };
+    }
+
+}

@@ -1,0 +1,27 @@
+mysql:
+  dns: "root:123456@tcp(localhost:3306)/scats?charset=utf8&parseTime=true&loc=Local"
+  pass: scats
+
+ldap:
+  addr: ldap://domain.sensetime.com:389
+  username: ucg.algotest
+  password: Goodsense@
+
+
+kafka:
+  kafkaAddrApp: 10.4.243.11:9092
+  kafkaTopicApp: scats.app
+  kafkaAddrTask: 10.4.243.11:9092
+  kafkaTopicTask: scats.task.normal
+  kafkaTopicDetectTask: scats.task.structural
+  kafkaTopicCarplateTask: scats.task.carplate
+  kafkaAddrDraw: 10.4.243.11:9092
+
+minio:
+  url: 127.0.0.1:8090
+  access_key: root
+  secret_key: minioroot
+osg_url: http://10.4.196.134:30080/components/osg-default/v1/hitl_data
+
+mhs_ser_addr: 
+ats_ser_addr: 10.4.243.11:9001
