@@ -2,11 +2,11 @@ package server
 
 import (
 	"encoding/json"
+	"example-backend/api"
+	"example-backend/config"
 	"fmt"
 	"net/http"
 	"regexp"
-	"tats-backend/api"
-	"tats-backend/config"
 	"time"
 
 	"google.golang.org/grpc/codes"

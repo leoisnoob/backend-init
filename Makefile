@@ -26,7 +26,7 @@ serve:
 	go run main.go serve
 migrate:
 	go run main.go migrate
-name:='registry.sensetime.com/ucg_test/hitl-backend:v0.0.6'
+name:='registry.sensetime.com/ucg_test/example-backend:v0.0.6'
 docker:
 	docker build -t ${name} .
 	docker push ${name}

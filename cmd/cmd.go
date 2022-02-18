@@ -1,9 +1,9 @@
 package cmd
 
 import (
-	"tats-backend/config"
-	"tats-backend/server"
-	"tats-backend/store"
+	"example-backend/config"
+	"example-backend/server"
+	"example-backend/store"
 
 	"github.com/urfave/cli/v2"
 )
@@ -12,7 +12,7 @@ var configPath string
 
 func GetApp() *cli.App {
 	app := &cli.App{
-		Name: "tats-backend",
+		Name: "example-backend",
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:        "conf",

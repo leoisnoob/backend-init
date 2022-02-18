@@ -1,4 +1,4 @@
-module tats-backend
+module example-backend
 
 go 1.17
 

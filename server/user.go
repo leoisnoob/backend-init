@@ -2,10 +2,10 @@ package server
 
 import (
 	"context"
+	"example-backend/api"
+	"example-backend/config"
 	"fmt"
 	"net/http"
-	"tats-backend/api"
-	"tats-backend/config"
 	"time"
 
 	"github.com/go-ldap/ldap/v3"

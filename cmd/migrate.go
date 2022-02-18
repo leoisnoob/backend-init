@@ -6,9 +6,9 @@ import (
 	"log"
 	"reflect"
 
-	"tats-backend/config"
-	"tats-backend/model"
-	"tats-backend/store"
+	"example-backend/config"
+	"example-backend/model"
+	"example-backend/store"
 
 	"github.com/urfave/cli/v2"
 	"gorm.io/gorm"

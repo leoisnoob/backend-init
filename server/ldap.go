@@ -2,8 +2,8 @@ package server
 
 import (
 	"crypto/tls"
+	"example-backend/config"
 	"log"
-	"tats-backend/config"
 
 	"github.com/go-ldap/ldap/v3"
 )

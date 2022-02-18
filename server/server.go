@@ -9,8 +9,8 @@ import (
 	"strings"
 	"syscall"
 
-	"tats-backend/api"
-	"tats-backend/store"
+	"example-backend/api"
+	"example-backend/store"
 
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/v2/runtime"

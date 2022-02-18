@@ -8,8 +8,8 @@ import "mod.proto";
 
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
     info: {
-        title: "tats-backend";
-        description: "tats-backend http 服务文档";
+        title: "example-backend";
+        description: "example-backend http 服务文档";
         version: "1.0";
     }
     host: "10.4.196.133:30090";
